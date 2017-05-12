@@ -7,16 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CounterComponent implements OnInit {
   count:number = 0;
+  inputValue: number;
   title:string = 'Angular Counter Example'
   constructor() { }
 
   ngOnInit() {
   }
 
-  increament(){
-    this.count++;
+  increament(userInput){
+    if(userInput){
+      this.count += userInput ;
+      this.inputValue = null;
+    }
+    else{
+      this.count++;
+    }
+    
   }
-  decreament(){
+  decreament(userInput){
+    if(userInput){
+      this.count -= userInput;
+      this.inputValue = null;
+    }
     this.count--;
   }
 

@@ -1,7 +1,8 @@
 <h1 align="middle" >{{title}}</h1>
 <div align='middle' >
 <h2 id="countText"> {{count}} </h2>
-<button type="" (click)="increament()" >+</button>
-<button type="" (click)="decreament()" >-</button>  
+<input type="number" name="" value="" [(ngModel)] = 'inputValue' ><br>
+<button type="" (click)="increament(inputValue)" >+</button>
+<button type="" (click)="decreament(inputValue)" >-</button>  
 </div>
 
